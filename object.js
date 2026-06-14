@@ -52,14 +52,36 @@
 
 
 // constructor for multiple object creating.
+// function  Student(name , age){
+//     this.name=name;
+//     this.age=age;
+//     this.introduction=function(){//this is function expression. 
+//         console.log(`Hi I am ${this.name}. I am ${this.age} years old`);
+//         return "thankyou";
+//     }
+// }
+// let s1= new Student("Radha", 22);
+// let s2= new Student("krishna",23);
+// //console.log(s1);//this is calling a constructor object. 
+// //console.log(s2.name);//this is printing, a particular properties of a object .
+// s1.introduction();
+// s2.introduction();
+// console.log(s2.introduction());//printing the return value.
+
+
+ 
+
+
+//prototype..this will not create extra memory for same function.
 function  Student(name , age){
     this.name=name;
     this.age=age;
-    this.introduction=function(){//this is function expression. 
-        console.log(`Hi I am ${this.name}. I am ${this.age} years old`);
-        return "thankyou";
-    }
+    
 }
+Student.prototype.introduction=function(){//this is function expression. 
+        console.log(`Hi I am ${this.name}. I am ${this.age} years old`);
+        return "thankyou! \u{1F64F}";
+    }
 let s1= new Student("Radha", 22);
 let s2= new Student("krishna",23);
 //console.log(s1);//this is calling a constructor object. 
@@ -67,5 +89,5 @@ let s2= new Student("krishna",23);
 s1.introduction();
 s2.introduction();
 console.log(s2.introduction());//printing the return value.
+console.log("\u{2764}\u{FE0F}");
 
- 
