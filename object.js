@@ -73,21 +73,62 @@
 
 
 //prototype..this will not create extra memory for same function.
-function  Student(name , age){
-    this.name=name;
-    this.age=age;
+// function  Student(name , age){
+//     this.name=name;
+//     this.age=age;
     
-}
-Student.prototype.introduction=function(){//this is function expression. 
-        console.log(`Hi I am ${this.name}. I am ${this.age} years old`);
-        return "thankyou! \u{1F64F}";
-    }
-let s1= new Student("Radha", 22);
-let s2= new Student("krishna",23);
-//console.log(s1);//this is calling a constructor object. 
-//console.log(s2.name);//this is printing, a particular properties of a object .
-s1.introduction();
-s2.introduction();
-console.log(s2.introduction());//printing the return value.
-console.log("\u{2764}\u{FE0F}");
+// }
+// Student.prototype.introduction=function(){//this is function expression. 
+//         console.log(`Hi I am ${this.name}. I am ${this.age} years old`);
+//         return "thankyou! \u{1F64F}";
+//     }
+// let s1= new Student("Radha", 22);
+// let s2= new Student("krishna",23);
+// //console.log(s1);//this is calling a constructor object. 
+// //console.log(s2.name);//this is printing, a particular properties of a object .
+// s1.introduction();
+// s2.introduction();
+// console.log(s2.introduction));//printing the return value.
+// console.log("\u{2764}\u{FE0F}");
 
+
+
+
+
+//for..in loop in object
+// let user={
+//  name:"Radha",
+//  rollno:2323,
+//  isAdmin:true,
+//  marks:{phy:78,chem:87,maths:99,eng:88},
+//  language:["hindi","english","avadhi"],
+// }
+// for(let key in user){
+//     if(Array.isArray(user[key])){//accessing array in object.
+//     console.log(key,": this is array");
+//     console.log(user[key]);
+    
+//     }
+//     else{
+//     console.log(key,":",user[key]);}
+//     };
+// //"in"   to check whether the specified property is present in object or not.
+// console.log("language" in user);
+// console.log("age" in user);
+
+
+
+
+//computed property name..
+let feature1="username";
+let feature2="email";
+let feature3="method";
+let users={
+    [feature1]:"radha",
+    [feature2]:"radha@krishna0203",
+    [feature3]:function(){
+        console.log("this is dynamic method");
+    },
+}
+console.log(users);
+users.method();
